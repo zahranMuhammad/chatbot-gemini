@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="status-bar">
+                <span class="dot"></span>
+                <small>SYSTEM - GEMINI 3.5 FLASH</small>
+                <button onclick="resetChat()" id="resetBtn">Reset</button> </div>
+            <h1>AI.<span>Assistant</span></h1>
+        </header>
+
+        <div id="chat-window" class="chat-window">
+            <div class="message ai">
+                Halo!!
+            </div>
+        </div>
+
+        <div class="input-area">
+            <textarea id="userInput" placeholder="Tulis perintah di sini..." onkeydown="handleKeyPress(event)"></textarea>
+            <button onclick="tanyaAI()" id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
